@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class ='jumbotron'>
+            <p class="lead">Чтобы добавить пост нажмите кнопку 'ADD POST'. Чтобы удалить - 'DELETE', редактировать - 'EDIT'</p>
+        </div>
+    </header>
+    <main>
+        <div class="add-post-container">
+            <button type="button" class="add-button btn btn-primary">ADD POST</button>
+        </div>
+        <div class="posts-container">
+
+        </div>
+        <section class="edit-modal visually-hidden">
+            <form class="modal-form">
+                <div class="form-group col-4">
+                    <label for="Userid">UserId:</label>
+                    <input type="text" name="userid">
+                </div>
+                <div class="form-group col-4">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title">
+                </div>
+                <div class="form-group col-4">
+                    <label for="body">Body:</label>
+                    <input type="text" name="body">
+                </div>
+                <button type="button" class="on-edit-button col-4">EDIT</button>
+                <div class="form-errors"></div>
+                <div class="close edit-close"></div>
+            </form>
+        </section>
+        <section class="add-modal  visually-hidden">
+            <form class="modal-form">
+                <div class="form-group col-4">
+                    <label for="Userid">UserId:</label>
+                    <input type="text" name="userid">
+                </div>
+                <div class="form-group col-4">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title">
+                </div>
+                <div class="form-group col-4">
+                    <label for="body">Body:</label>
+                    <input type="text" name="body">
+                </div>
+                <button type="button" class="submit-btn col-4">ADD</button>
+                <div class="form-errors"></div>
+                <div class="close add-close"></div>
+            </form>
+        </section>
+    </main>
+    <script type="module" src = "./index.js"></script>
+</body>
+</html>
