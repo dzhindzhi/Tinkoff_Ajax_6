@@ -92,3 +92,8 @@
     border: 0;
     clip: rect(0 0 0 0);
   }
+.fetch-error-wrapper{
+    /* width: 500px; */
+    margin: 0 auto;
+    margin-top: 10px;
+}

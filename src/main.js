@@ -1,5 +1,6 @@
 
 class ApiService{
+    _fetchError = document.querySelector('.fetch-error-wrapper');
     create(data){
         return fetch('https://jsonplaceholder.typicode.com/posts',{
             method: 'POST',
@@ -7,7 +8,14 @@ class ApiService{
                 'Content-Type': 'application/json; charset=UTF-8'
             },
             body: JSON.stringify(data)
-        }).then((res) => res.json())
+        }).then((res) => {
+            if(!res.ok){
+                throw new Error('fetch error');
+            }
+            else{
+                return res.json();
+            }
+        }).catch(() => this._fetchError.classList.toggle('visually-hidden'));
     }
     edit(data, updId){
         const id = updId;
@@ -17,15 +25,29 @@ class ApiService{
             headers:{
                 'Content-type': 'application/json; charset=UTF-8',
               },
-        }).then((res) => res.json())
+        }).then((res) => {
+            if(!res.ok){
+                throw new Error('fetch error');
+            }
+            else{
+                return res.json();
+            }
+        }).catch(() => this._fetchError.classList.toggle('visually-hidden') );
     }
     getName(id){
-        return fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => res.json()).then((json) => json.username);
+        return fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
+            if(!res.ok){
+                throw new Error('fetch error');
+            }
+            else{
+                return res.json();
+            }
+        }).then((json) => json.username).catch(() => this._fetchError.classList.toggle('visually-hidden'));
     }
     remove(id){
         return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,{
             method:'DELETE',
-        });
+        }).catch(() => this._fetchError.classList.toggle('visually-hidden'));
     }
 }
 
