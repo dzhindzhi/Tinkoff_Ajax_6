@@ -1,0 +1,99 @@
+.jumbotron p{
+    text-align: center;
+}
+.add-post-container{
+    text-align: center;
+}
+
+.card{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.posts-container button{
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #17175e;
+    margin: 10px;
+    color: #fff;
+    border-radius: 3px;
+    width: 75px;
+   
+}
+.delete-button{
+    align-self: center;
+    
+}
+.edit-button {
+    align-self: center;
+}
+
+.add-modal{
+    position: fixed;
+    background-color: bisque;
+    border-radius: 2px;
+    width: 400px;
+    left:40%;
+    top: 30%;
+    z-index: 3;
+}
+.edit-modal{
+    position: fixed;
+    background-color: bisque;
+    width: 400px;
+    left:40%;
+    top: 30%;
+    z-index: 3;
+}
+.modal-form button{
+    margin-left: 5px;
+    text-decoration: none;
+    background-color: #17175e;
+    margin: 10px;
+    color: #fff;
+    border-radius: 3px;
+}
+.modal-form{
+    position: relative;
+}
+.close{
+    position: absolute;
+    top: 20px;
+	right: 20px;
+	width: 24px;
+	height: 24px;
+    cursor: pointer;
+}
+.close::after,
+.close::before{
+    content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background-color:red;
+}
+.close::before{
+    transform: rotate(45deg);
+}
+.close::after{
+    transform: rotate(-45deg);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+.fetch-error-wrapper{
+    /* width: 500px; */
+    margin: 0 auto;
+    margin-top: 10px;
+}
